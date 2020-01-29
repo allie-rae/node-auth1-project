@@ -3,7 +3,7 @@ const router = require("express").Router();
 
 const Users = require("../users/users-model.js");
 
-router.get("/secret", (req, res, next) => {
+router.get("/restricted", (req, res, next) => {
     if (req.headers.authorization) {
         bc.hash(req.headers.authorization, 8, (err, hash) => {
             if (err) {
